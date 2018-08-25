@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="description" content="众筹平台">
+<title>随便筹</title>
+<link href="../16X16_yiwei_logo.ico" rel="SHORTCUT ICON">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = moveFn;//抓取解析
+function moveFn(){
+	 if( typeof( window.innerWidth ) == 'number' ) {
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else{
+    myWidth = document.documentElement.clientWidth;/* for ie*/
+    myHeight = document.documentElement.clientHeight;/* for ie*/
+  }
+  var bn01=document.getElementById("msg");//設定彈框高度
+	var bn01_Y=(myHeight/2)*0.02+"px";
+	bn01.style.margin=bn01_Y+" auto";
+}
+
+</script>
+</head>
+<body>
+<!--top_menu-開始-->
+<div class="top_menu">
+  <div class="top_menu_content"> <a href="javascript:history.go(-1);" class="return_icon"></a> <a href="javascript:void(0);" class="top_menu_bn" onClick="location.href='#notice'">频道<br>
+    选单</a>
+    <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+  </div>
+</div>
+<!--top_menu-end--> 
+<!--hide_menu-開始-->
+<div class="lightbox-target" id="notice">
+  <div class="down_menu_content">
+    <div class="down_menu_bn"><a href="index.html"><img src="images/down_menu_bn01_icon_40X40.png"><br>
+      首　页</a></div>
+    <div class="down_menu_bn"><a href="main.html"><img src="images/down_menu_bn02_icon_40X40.png"><br>
+      众筹分类</a></div>
+    <div class="down_menu_bn"> <a href="orderslist.html"><img src="images/down_menu_bn03_icon_40X40.png"><br>
+      支持项目</a></div>
+    <div class="down_menu_bn"><a href="login.html"><img src="images/down_menu_bn04_icon_40X40.png"><br>
+      个人中心</a></div>
+    <div class="clear"></div>
+  </div>
+  <a href="javascript:history.go(-1);" class="lightbox-close"></a> </div>
+<!--hide_menu-end-->
+<div class="main_content"> 
+  <!--內容_開始-->
+  <div class="content_w740">
+  <div class="area_bg">
+    <div class="row container-fluid">
+    <a href="goods_page.html"><div class="top_title">变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜</div>
+      <div class="col-xs-3 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div>
+      <div class="col-xs-9 col-sm-10">
+        <h5 class="text-danger">支持￥1</h5>
+        <h6 class="text-muted"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;支持数量&nbsp;10</h6>
+      </div>
+      <div class="pull-right" style="margin-top:-32px"><span class="btn btn-default btn-sm glyphicon glyphicon-chevron-right">支持详情</span></div>
+      </a>
+    </div>
+    <hr>
+    <div class="row container-fluid">
+    <h4><small><strong>实付总额：</strong></small><span class="point_red">￥1234567</span></h4>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="area_bg">
+  <div class="row container-fluid">
+  <h5><strong>回报内容：</strong></h5><!--依據上方不同選擇,顯示不同回報內容-->
+  <div class="col-xs-12">每满5000位支持者抽取1位幸运用户，不满足时也抽取1位。幸运用户将会获得TS800R特别版1台（价值4999元）。幸运用户将由XX官方抽取，抽奖规则及中奖者名单将在话题区公布。(全国包邮,台港澳除外)</div>
+  <div class="col-xs-12"><h6 class="text-muted"><span class="glyphicon glyphicon-time"></span>&nbsp;预计回报发送时间：项目成功结束后30天</h6></div>
+  <div class="clear"></div>
+    <h5><strong>订单编号：</strong>1234567890</h5>
+    <h5><strong>订单状态：</strong><span class="text-success">微信支付</span><!--<span class="text-danger">待支付</span>--></h5>
+    <h5><strong>交易时间：</strong>2016/08/09 13:30:40</h5>
+    <h5><strong>项目状态：</strong><span class="point_green">进行中</span></h5>
+    <h5><strong>备注留言：</strong></h5><div class="col-xs-12">支持支持支持支持支持支持支持支持支持支持支持支持支持支持支持支持</div>
+    </div><div class="clearfix"></div>
+  </div>
+  <div class="area_bg">
+  <div class="row container-fluid">
+    <div class="post_office_border">
+          <h5><span class="glyphicon glyphicon-user"></span>&nbsp;凡鸣鸣&nbsp;&nbsp;<span class="glyphicon glyphicon-phone"></span>&nbsp;1377****404</h5>
+          <h5><span class="glyphicon glyphicon-map-marker"></span>&nbsp;四川绵阳江油河小区</h5>
+      </div>
+      </div>
+    </div>
+  
+  </div>
+  <div style="height:80px"><!--純粹墊高用不被下方選單遮住,不要拿掉--></div>
+</div>
+
+<!--down_menu-開始-->
+<!--如果訂單為"待支付"狀態即出現下面這選項-->
+<div class="down_menu">
+  <div class="down_menu_content">
+  <div class="col-xs-6"><button class="btn btn-default btn-block">取消支持</button></div>
+  <div class="col-xs-6"><a href="support.html" class="btn btn-danger btn-block">立即支付</a></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--down_menu-end-->
+</body>
+</html>

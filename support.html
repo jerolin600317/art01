@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="description" content="众筹平台">
+<title>随便筹</title>
+<link href="../16X16_yiwei_logo.ico" rel="SHORTCUT ICON">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = moveFn;//抓取解析
+function moveFn(){
+	 if( typeof( window.innerWidth ) == 'number' ) {
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else{
+    myWidth = document.documentElement.clientWidth;/* for ie*/
+    myHeight = document.documentElement.clientHeight;/* for ie*/
+  }
+  var bn01=document.getElementById("msg");//設定彈框高度
+	var bn01_Y=(myHeight/2)*0.02+"px";
+	bn01.style.margin=bn01_Y+" auto";
+}
+
+</script>
+</head>
+<body>
+<!--top_menu-開始-->
+<div class="top_menu">
+  <div class="top_menu_content"> <a href="javascript:history.go(-1);" class="return_icon"></a> <a href="javascript:void(0);" class="top_menu_bn" onClick="location.href='#notice'">频道<br>
+    选单</a>
+    <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+  </div>
+</div>
+<!--top_menu-end--> 
+<!--hide_menu-開始-->
+<div class="lightbox-target" id="notice">
+  <div class="down_menu_content">
+    <div class="down_menu_bn"><a href="index.html"><img src="images/down_menu_bn01_icon_40X40.png"><br>
+      首　页</a></div>
+    <div class="down_menu_bn"><a href="main.html"><img src="images/down_menu_bn02_icon_40X40.png"><br>
+      众筹分类</a></div>
+    <div class="down_menu_bn"> <a href="orderslist.html"><img src="images/down_menu_bn03_icon_40X40.png"><br>
+      支持项目</a></div>
+    <div class="down_menu_bn"><a href="login.html"><img src="images/down_menu_bn04_icon_40X40.png"><br>
+      个人中心</a></div>
+    <div class="clear"></div>
+  </div>
+  <a href="javascript:history.go(-1);" class="lightbox-close"></a> </div>
+<!--hide_menu-end-->
+<div class="main_content"> 
+  <!--內容_開始-->
+  <div class="content_w740">
+  <div class="area_bg">
+    <div class="top_title">变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜</div>
+    <h5 class="text-success pull-left"><span class="glyphicon glyphicon-gift"></span>&nbsp;选择回报</h5>
+    <hr>
+    <!--後台可新增設定支持項目數量--->
+    <div class="row container-fluid">
+      <div class="col-xs-3 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div>
+      <div class="col-xs-7 col-sm-9">
+        <h5 class="text-danger">支持￥1</h5>
+        <h6 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;无限名额</h6>
+      </div>
+      <div class="col-xs-2 col-sm-1"> <span class="support_select">
+        <input name="support" type="radio" id="r1" value="1">
+        <label for="r1"><span></span></label>
+      </span> </div>
+      
+    </div>
+    <hr>
+    <!--後台可新增設定支持項目數量--->
+    <div class="row container-fluid">
+        <div class="col-xs-3 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div>
+        <div class="col-xs-7 col-sm-9">
+          <h5 class="text-danger">支持￥123456</h5>
+          <h6 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;剩余0位</h6>
+        </div>
+        <div class="col-xs-2 col-sm-1"><span class="label label-danger pull-right">限额已满</span>
+        <!-- <span class="support_select">
+        <input name="support" type="radio" id="r2" value="1">
+        <label for="r2"><span></span></label>
+      </span> 限額已滿即不會出現勾選區塊-->
+        </div>
+    </div>
+    <hr>
+    <!--後台可新增設定支持項目數量--->
+    <div class="row container-fluid">
+      <div class="col-xs-3 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div>
+      <div class="col-xs-7 col-sm-9">
+        <h5 class="text-danger">支持￥123456</h5>
+        <h6 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;剩余12345位</h6>
+      </div>
+      <div class="col-xs-2 col-sm-1"> <span class="support_select">
+        <input name="support" type="radio" id="r3" value="1">
+        <label for="r3"><span></span></label>
+      </span> </div>
+    </div>
+    <hr>
+    <!--後台可新增設定支持項目數量--->
+    <div class="row container-fluid">
+      <div class="col-xs-3 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div>
+      <div class="col-xs-7 col-sm-9">
+        <h5 class="text-danger">支持￥1234万</h5>
+        <h6 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;剩余123456位</h6>
+      </div>
+      <div class="col-xs-2 col-sm-1"> <span class="support_select">
+        <input name="support" type="radio" id="r4" value="1">
+        <label for="r4"><span></span></label>
+      </span> </div>
+    </div>
+    <hr>
+    <div class="row container-fluid">
+    <div class="form-group">
+    <span class="col-xs-6 control-label text-right"><h5><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;请选择支持数</h5></span>
+      <div class="input-group col-xs-6">
+       <span class="input-group-btn">
+        <button type="submit" class="btn btn-default glyphicon glyphicon-minus" style="top:0px"></button>
+        </span>
+        <input type="text" class="form-control text-center" placeholder="1">
+        <span class="input-group-btn">
+        <button type="submit" class="btn btn-default glyphicon glyphicon-plus" style="top:0px"></button>
+      </span> </div></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="area_bg">
+  <div class="row container-fluid">
+    <h5 class="text-success"><span class="glyphicon glyphicon-usd"></span>&nbsp;支付方式：</h5>
+    <hr>
+    <h5 class="row container-fluid">
+    <ul class="list-inline">
+        <li class="col-xs-4 text-center">
+        
+          <input name="pay" type="radio" value="option1" id="radio01"><label for="radio01">&nbsp;微信支付</label>
+          </li>
+          <li class="col-xs-4 text-center">
+        
+          <input name="pay" type="radio" value="option1" id="radio02"><label for="radio02">&nbsp;支付宝支付</label>
+          </li>
+          <li class="col-xs-4 text-center">
+        
+          <input name="pay" type="radio" value="option1" id="radio03"><label for="radio03">&nbsp;网银支付</label>
+          </li></ul>
+        <!--<ul class="list-inline">
+        <li class="col-xs-8 col-sm-4">
+        <label>
+          <input type="checkbox" value="option1">&nbsp;易币支付
+          <div class="point_red">&nbsp;&nbsp;&nbsp;易币余额：<img src="images/yiwei_money_icon_40X40.png" style="width:16px" align="absmiddle">&nbsp;5000000</div></label></li>
+          <li class="col-xs-4 col-sm-2"><a href="ordertrade.html" class="btn btn-default">兑换易币</a></li>
+          <li class="col-xs-12 col-sm-6">
+        <label>
+          <input type="checkbox" value="option2">&nbsp;使用积分&nbsp;<span class="point_red">积分余额：50</span></label>
+          </li></ul>-->
+      </h5>
+    </div>
+  </div>
+  <div class="area_bg">
+  <div class="row container-fluid">
+  <h5><strong>回报内容：</strong></h5><!--依據上方不同選擇,顯示不同回報內容-->
+  <div class="col-xs-12">每满5000位支持者抽取1位幸运用户，不满足时也抽取1位。幸运用户将会获得TS800R特别版1台（价值4999元）。幸运用户将由XX官方抽取，抽奖规则及中奖者名单将在话题区公布。(全国包邮,台港澳除外)</div>
+  <div class="col-xs-12"><h6 class="text-muted"><span class="glyphicon glyphicon-time"></span>&nbsp;预计回报发送时间：项目成功结束后30天</h6></div>
+  <div class="clear"></div>
+    <h5><strong>支持总额：</strong><span class="text-danger">￥1234567</span><!--依據上方數量不同,顯示不同--></h5>
+    <h5><strong>配送费用：</strong><span class="text-danger">￥50</span></h5>
+    <h4><small><strong>实付总额：</strong></small><span class="point_red">￥1234567</span><!--依據上方勾選不同,顯示不同--></h4>
+    </div>
+  </div>
+  <div class="area_bg">
+  <div class="row container-fluid">
+    <h5 class="text-success pull-left"><span class="glyphicon glyphicon-edit"></span>&nbsp;备注：</h5>
+    <hr>
+    <div class="row container-fluid"><!--後台需可以輸入備註填寫條件欄位-->
+      <textarea rows="3" class="form-control" placeholder="有六色可选，请注明需要哪个颜色以便出货"></textarea>
+    </div></div>
+  </div>
+  <div class="area_bg">
+  <div class="row container-fluid">
+    <a href="address.html"><div class="post_office_border">
+    <div class="pull-right">
+            <span class="btn btn-default glyphicon glyphicon-pencil"><!--編輯--></span>
+          </div>
+          <h5><span class="glyphicon glyphicon-user"></span>&nbsp;凡鸣鸣&nbsp;&nbsp;<span class="glyphicon glyphicon-phone"></span>&nbsp;1377****404</h5>
+          <h5><span class="glyphicon glyphicon-map-marker"></span>&nbsp;四川绵阳江油河小区</h5>
+      </div></a>
+      </div>
+    </div>
+  <div class="area_bg">
+  <div class="row container-fluid">
+    <h5 class="text-success pull-left"><span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;风险提醒：</h5>
+    <a id="open" data-toggle="collapse" data-parent="#accordion" href="#coll_01" class="btn btn-default btn-xs pull-right" style="margin-top:8px"><span class="text-muted"><small><span class="glyphicon glyphicon-chevron-down"></span></small>&nbsp;展开</span></a>
+    <a id="close" data-toggle="collapse" data-parent="#accordion" href="#coll_01" class="btn btn-default btn-xs pull-right" style="margin-top:8px"><span class="text-muted"><small><span class="glyphicon glyphicon-chevron-up"></span></small>&nbsp;收起</span></a>
+    <script>
+	  //簡易開關"關注""已關注"
+$(document).ready(function(){
+	$("#close").hide();
+    $("#close").click(function(){
+        $("#close").hide();
+		$("#open").show();
+    });
+    $("#open").click(function(){
+        $("#open").hide();
+		$("#close").show();
+    });
+});
+</script>
+    <hr>
+    <div id="coll_01" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+    请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：
+      <ol>
+        <li>风险提示条款和特别提示条款；</li>
+        <li>与您约定法律适用和管辖的条款；</li>
+        <li>其他以粗体标识的重要条款。</li>
+      </ol>
+      如您不同意相关协议、公告、规则、操作流程和项目页面承诺，您有权选择不支持；一旦选择支持，即视为您已确知并完全同意相关协议
+      </div><hr></div>
+    <div class="checkbox-inline"><!--如果未勾選彈出訊息提示-->
+        <input name="checkbox01" type="checkbox" id="checkbox01" value="option1"><label for="checkbox01">&nbsp;阅读并同意</label>&nbsp;<a href="#protocol" class="pull-right text-primary">《支持者协议》</a>
+      </div>
+  </div></div>
+  </div>
+  <div style="height:80px"><!--純粹墊高用不被下方選單遮住,不要拿掉--></div>
+</div>
+
+<div class="lightbox-record" id="protocol" onClick="history.go(-1);">
+      <div class="record" id="msg"><!--支持者协议,這完全是抓京東的,到時需要換掉-->
+<h5 class="text-center">随便筹支持者协议</h5>
+<hr>
+<p>鉴于：</p>
+<p>       众筹旨在使发起人和支持者共同实现梦想。发起人可以在随便筹平台上发起创新项目的筹款需求，并承诺提供不同形式的回报给支持创新项目的支持者；支持者出资支持项目，可以帮助其他人实现梦想、追求新奇好玩回报，展现筹客精神。</p>
+<p>       为明确发起人和支持者的权利义务，保护支持者的合法权益，特制定本协议。</p>
+<h5>第一条 定义和解释</h5>
+<p>除非本协议正文另有明确所指，在本协议中所用下列术语定义如下：</p>
+<ol><li>众筹：是指发起人在随便筹平台上发起项目、支持者支付支持款、发起人按承诺履行义务的行为。</li>
+<li>支持者：是指出资支持众筹项目，帮助发起人实现梦想的自然人、法人或其他组织。</li>
+<li>众筹期限：是指发起人确定的众筹项目的募集时间。</li>
+<li>众筹募集成功：是指众筹项目期限届满且达到预定募集金额。</li>
+<li>众筹失败众筹项目募集期限届满但未达到预定募集金额；</li></ol>
+<h5>第二条 协议主体和协议范围</h5>
+<p>本协议由发起人、支持者与XX共同签署（签约地：XXXX）。发起人在随便筹平台发起众筹项目、支持者支持众筹项目后，本协议即构成对三方具有约束力的法律文件。三方同意接受本协议、各类公告、规则、操作流程及项目页面承诺等的法律约束。</p>
+<h5>第三条 发起人和支持者的权利义务</h5>
+1.发起人在随便筹平台发起众筹项目，在项目页面注明众筹期限、预定募集金额和项目档位回报等信息，并根据项目具体情况确定是否设置预热期；支持者点击“支持”按钮进行支持。众筹募集成功后，发起人按约定在承诺时间内向支持者发放回报、按承诺开具发票并承担后续服务；属于公益类项目的，发起人应按承诺将款项用于公益用途。
+
+2.发起众筹后，发起人应严格按照项目计划执行，并在项目计划执行过程中积极与支持者互动。发起人应指定专人维护其发起项目页面中任何话题区内支持者或其他XX用户的留言，并实时更新项目进展，以便XX用户知悉。
+
+3.支持者获得的众筹项目各档位回报如下：
+
+1)选择纯抽奖档位的，除被抽中获得奖品外，众筹募集成功后发起人将不会发放回报；
+
+2)支持者选择无私支持档位的，项目成功后发起人将不会发放回报；
+
+3)支持纯抽奖档位、无私奉献档位和公益众筹项目档位的，一旦支付成功将不予退款，众筹失败的除外；
+
+4)选择无私奉献档位、纯抽奖档位以外档位的，众筹募集成功后发起人将按照项目页面承诺发放回报。
+
+4.发起人应当按照《随便筹回报服务规则》和项目页面承诺，为支持者提供回报。因项目回报的漏发、退换等情形与支持者产生任何纠纷的，发起人应与支持者进行友好协商，尽其最大可能处理纠纷。公益众筹项目除外。
+
+5.众筹失败的情况下，发起人应及时通过随便筹平台及其他途径告知支持者，并与支持者进行友好协商，尽其最大可能处理纠纷。
+
+6.众筹回报的具体内容根据发起人在项目页面的承诺而定。发起人与支持者另行协商，对众筹回报内容进行修改的，该修改后的回报不被视为众筹的组成部分。
+
+ 
+
+第四条 违约责任
+
+除本协议另有约定外，任何一方违反其于本协议项下的陈述、保证或承诺，而使其他各方遭受任何诉讼、纠纷、索赔、处罚等的，违约方应与其他各方进行充分友好协商并依法承担违约责任。如某一方发生违约行为，守约方可以书面通知方式要求违约方在指定的时限内停止违约行为，要求其消除影响。如违约方未能按时停止违约行为，则守约方有权立即终止本协议。
+
+ 
+
+第五条 风险提示
+
+1.政策法律风险：有关众筹的相关国家法律法规及政策变化，发起人可能根据该变化依法调整众筹的内容，届时支持者须与发起人友好协商解决，发起人应尽最大可能处理纠纷。
+
+2.市场和运营风险：由于项目运营问题、市场行情变化等情形，支持者可能无法得到项目承诺回报或回报与承诺不一致，届时支持者须与发起人友好协商解决，发起人应尽最大可能处理纠纷。
+
+3.技术风险：众筹涉及到互联网服务，可能会受到各个环节不稳定因素的影响。因不可抗力、计算机病毒或黑客攻击、系统不稳定以及其他任何技术、互联网络、通信线路原因等造成的系统故障、服务中断或不能满足服务要求的风险，及由此发生经济损失的，发起人和支持者须自行承担。
+
+ 
+
+第六条 特别提示
+
+发起人和支持者均已理解并同意：XX仅为发起人与支持者之间的众筹提供平台网络空间、技术服务和支持等中介服务。XX作为居间方，并不是发起人或支持者中的任何一方，众筹仅存在于发起人和支持者之间，使用随便筹平台产生的法律后果由发起人与支持者自行承担。XX不对项目及项目回报质量作任何形式的担保，对于因项目及项目回报发生的一切纠纷（包括但不限于回报质量问题，回报后续服务），由发起人和支持者自行解决。
+
+ 
+
+第七条 其他规则
+
+1.本协议项下众筹活动所产生的税费负担由中国相关法律法规所规定的责任方自行承担并依法申报和缴纳。
+
+2.如果本协议的部分条款被争议解决机构认定为违法，则并不影响其他条款的有效性。
+
+3.因本协议引起的或与本协议有关的争议，均适用中华人民共和国法律。
+
+4.因本协议引起的或与本协议有关的争议，各方应协商解决。协商不成的，任何一方均有权向XX所在地有管辖权的人民法院提起诉讼。
+
+ 
+
+
+      </div>
+    </div>
+
+<!--down_menu-開始-->
+<div class="down_menu">
+  <div class="down_menu_content">
+  <div class="col-xs-12"><a href="#" class="btn btn-danger btn-block">立刻支持</a><!--支付成功即導至"我的支持"頁,如果失敗即導至"support_carry_out.html"--></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--down_menu-end-->
+</body>
+</html>

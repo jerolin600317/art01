@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="description" content="众筹平台">
+<title>随便筹</title>
+<link href="../16X16_yiwei_logo.ico" rel="SHORTCUT ICON">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+function toUtf8(str) {  //轉換成utf8  
+    var out, i, len, c;    
+    out = "";    
+    len = str.length;    
+    for(i = 0; i < len; i++) {    
+        c = str.charCodeAt(i);    
+        if ((c >= 0x0001) && (c <= 0x007F)) {    
+            out += str.charAt(i);    
+        } else if (c > 0x07FF) {    
+            out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));    
+            out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));    
+            out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
+        } else {    
+            out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));    
+            out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
+        }    
+    }    
+    return out;    
+} 
+var str = toUtf8("http://m.913yw.com/index/home.shtml草尼瑪隔壁是斑馬！"); //qrcode生成的內容,可以是簡繁體中文
+$('#qrcode').qrcode(str); 
+$(document).ready(function() {
+    jQuery('#qrcode').qrcode({
+    render: "canvas",//也可以替换为table
+	text: str,
+    foreground: "#54b551",
+    background: "#FFF",
+});
+
+var image = document.getElementById("image"); //二維碼轉換成圖片
+var canvas = document.getElementById("qrcode").getElementsByTagName("canvas")[0];  
+image.src = canvas.toDataURL("image/png")
+})
+</script>
+</head>
+<body>
+
+<!--內容_開始-->
+<div class="spread">
+  <div class="content_w740">
+    <div class="area_bg">
+      <div class="row container-fluid">
+        <div class="col-xs-4 col-sm-2 personal_title"><img class="img-circle" src="images/100X100_jero01.gif"></div>
+        <div class="col-xs-8 col-sm-10">
+          <h5><small><span class="glyphicon glyphicon-user"></span></small>&nbsp;草泥马隔壁住大妈</h5>
+          <h5><small><span class="glyphicon glyphicon-credit-card"></span></small>&nbsp;会员ID：123457890</h5>
+          <h4 class="point_red">诚挚邀请您加入!</h4>
+        </div>
+        <div class="clear"></div>
+        <hr>
+        <a href="register.html">
+        <div class="spread_bg img-rounded">
+          <div class="panel-body text-center">
+            <div id="qrcode" class="img-thumbnail"><img id="image" src=""></div>
+            <h6>扫描或长按二维码立即加入</h6>
+          </div>
+          <button class="btn btn-danger btn-block" type="submit" value=""><span class="glyphicon glyphicon-log-in"></span>&nbsp;点击也可以加入喔</button>
+        </div>
+        </a> </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

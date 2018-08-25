@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="description" content="众筹平台">
+<title>随便筹</title>
+<link href="../16X16_yiwei_logo.ico" rel="SHORTCUT ICON">
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="swiper/swiper.3.1.7.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/swipebox.min.css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = moveFn;//抓取解析
+function moveFn(){
+	 if( typeof( window.innerWidth ) == 'number' ) {
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else{
+    myWidth = document.documentElement.clientWidth;/* for ie*/
+    myHeight = document.documentElement.clientHeight;/* for ie*/
+  }
+  var bn01=document.getElementById("msg");//設定彈框高度
+	var bn01_Y=(myHeight/2)*0.02+"px";
+	bn01.style.margin=bn01_Y+" auto";
+}
+</script>
+</head>
+<body>
+<!--top_menu-開始-->
+<div class="top_menu">
+  <div class="top_menu_content"> <a href="javascript:history.go(-1);" class="return_icon"></a>
+    
+    <a href="javascript:void(0);" class="top_menu_bn" onClick="location.href='#notice'">频道<br>
+    选单</a>
+    <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+  </div>
+</div>
+<!--top_menu-end--> 
+<!--hide_menu-開始-->
+<div class="lightbox-target" id="notice">
+  <div class="down_menu_content">
+    <div class="down_menu_bn"><a href="index.html"><img src="images/down_menu_bn01_icon_40X40.png"><br>
+      首　页</a></div>
+    <div class="down_menu_bn"><a href="main.html"><img src="images/down_menu_bn02_icon_40X40.png"><br>
+      众筹分类</a></div>
+    <div class="down_menu_bn"> <a href="orderslist.html"><img src="images/down_menu_bn03_icon_40X40.png"><br>
+      支持项目</a></div>
+    <div class="down_menu_bn"><a href="login.html"><img src="images/down_menu_bn04_icon_40X40.png"><br>
+      个人中心</a></div>
+    <div class="clear"></div>
+  </div>
+  <a href="javascript:history.go(-1);" class="lightbox-close"></a> </div>
+<!--hide_menu-end-->
+<div class="main_content"> 
+  <!--內容_開始-->
+  <div class="content_w740">
+  <div class="area_bg">
+  <div class="top_title">变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜变美美面膜</div>
+  <hr>
+    <!--產品輪播圖_開始-->
+    <div class="swiper-container big_photo">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/20160314_460X460_01.jpg"></div>
+        <div class="swiper-slide"><img src="images/20160314_460X460_01_1.jpg"></div>
+        <div class="swiper-slide"><img src="images/20160314_460X460_01_2.jpg"></div>
+      </div>
+    </div><span class="types_of"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>&nbsp;效益众筹</span>
+    <!--產品輪播圖_end-->
+    <hr>
+    <div class="detailed_test">唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静</div>
+    <hr>
+    <div class="round_out"><div class="round">5523万<h6>支持人数</h6><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></div></div>
+    <div class="round_out"><div class="red_round">5523%<h6>达成率</h6></div></div>
+    <div class="round_out"><div class="round">552<small>天</small><h6>剩余天数</h6></div></div>
+    <hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="center">
+    <td width="50%" style="border-right: solid 1px #d2d2d2"><h3 class="text-danger">￥1234万</h3><span class="glyphicon glyphicon-flag"></span>&nbsp;目标金额<!--數字達7位數百萬以上,即出現"万"字避免數字過多--></td>
+    <td width="50%"><h3 class="text-danger">￥123456</h3><span class="glyphicon glyphicon-flag"></span>&nbsp;已筹金额<!--數字達7位數百萬以上,即出現"万"字避免數字過多--></td>
+  </tr>
+</table>
+<hr>
+<a href="#detail_record" class="btn btn-block btn-info">查看详情>></a>
+  </div>
+  <div class="area_bg">
+  <!--項目進展,後台需要有可以上字上圖的功能,這裡只會秀最新一筆資料-->
+    <h5 class="pull-left text-success"><span class="glyphicon glyphicon-tasks"></span>&nbsp;项目进展</h5><a href="progress_list.html" class="pull-right"><h6>查看全部></h6></a>
+      <hr>
+     <div class="row container-fluid"><div class="col-xs-2 col-sm-1"><img class="img-circle" src="images/p_icon_100X100.gif"></div><div class="col-xs-10 col-sm-11" style=" margin-left:-15px"><h5>众筹项目官方</h5><h6 class="text-muted"><span class="glyphicon glyphicon-time"></span>&nbsp;6小时前</h6></div>
+     <div class="col-xs-10 col-sm-11 pull-right bg-info img-thumbnail">每满5000位支持者抽取1位幸运用户，不满足时也抽取1位。幸运用户将会获得TS800R特别版1台（价值4999元）。幸运用户将由京东官方抽取，抽奖规则及中奖者名单将在话题区公布。(全国包邮,台港澳除外)
+        <div class="row" id="box-container">
+        <!--三張圖為一組-->
+					<div class="col-xs-4 col-sm-2">
+						<a href="images/1.jpg" class="swipebox"><img src="images/1.jpg"></a>
+					</div>
+					<div class="col-xs-4 col-sm-2">
+						<a href="images/2.jpg" class="swipebox"><img src="images/2.jpg" alt=""></a>
+					</div>
+					<div class="col-xs-4 col-sm-2">
+						<a href="images/5.jpg" class="swipebox"><img src="images/5.jpg" alt=""></a>
+					</div>
+                    <div class="clearfix visible-xs-block"><!--在平版模式下圖片可以變為一列--></div>
+                    <!--三張圖為一組-->
+					<div class="col-xs-4 col-sm-2">
+						<a href="images/7.jpg" class="swipebox"><img src="images/7.jpg" alt=""></a>
+					</div>
+                    <div class="col-xs-4 col-sm-2">
+						<a href="images/7.jpg" class="swipebox"><img src="images/7.jpg" alt=""></a>
+					</div>
+                    <div class="col-xs-4 col-sm-2">
+						<a href="images/7.jpg" class="swipebox"><img src="images/7.jpg" alt=""></a>
+					</div>
+                    <div class="clearfix visible-xs-block"><!--在平版模式下圖片可以變為一列--></div>
+				</div>
+        </div>
+     <div class="clear"></div></div>
+  </div>
+  <div class="area_bg">
+  <!--热门话题,這裡只會秀最新一筆資料-->
+    <h5 class="text-success pull-left"><span class="glyphicon glyphicon-comment"></span>&nbsp;热门话题</h5><a href="hot_topic.html" class="pull-right"><h6>查看全部></h6></a>
+      <hr>
+     <div class="row container-fluid"><div class="col-xs-2 col-sm-1"><img class="img-circle" src="images/p_icon_100X100.gif"></div><div class="col-xs-10 col-sm-11" style=" margin-left:-15px"><h5>经过路人甲</h5><h6 class="text-muted"><span class="glyphicon glyphicon-time"></span>&nbsp;6小时前</h6></div>
+     <div class="col-xs-10 col-sm-11 pull-right bg-info img-thumbnail">每满5000位支持者抽取1位幸运用户，不满足时也抽取1位。幸运用户将会获得TS800R特别版1台（价值4999元）。幸运用户将由京东官方抽取，抽奖规则及中奖者名单将在话题区公布。(全国包邮,台港澳除外)
+        </div>
+     <div class="clear"></div></div>
+  </div>
+  <div class="area_bg">
+    <h5 class="text-success pull-left"><span class="glyphicon glyphicon-gift"></span>&nbsp;产品回报</h5>
+      <hr><!--後台可新增設定支持項目數量--->
+     <div class="row container-fluid"><div class="col-xs-4 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div><div class="col-xs-8 col-sm-10"><h4 class="text-danger">支持￥1</h4><h6 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;123456位支持者(无限名额)</h6><h6><span class="pull-right label label-default">配送费用：免运费</span></h6></div></div>
+     <p><div class="col-xs-12">每满5000位支持者抽取1位幸运用户，不满足时也抽取1位。幸运用户将会获得TS800R特别版1台（价值4999元）。幸运用户将由京东官方抽取，抽奖规则及中奖者名单将在话题区公布。(全国包邮,台港澳除外)</div></p>
+     <div class="col-xs-12"><h6 class="text-muted"><span class="glyphicon glyphicon-time"></span>&nbsp;预计回报发送时间：项目成功结束后30天</h6></div>
+     <div class="col-xs-12"><a href="support.html" class="btn btn-danger btn-block">直接支持<!--點擊直接支持到下一頁即直接勾選該項目--></a></div>
+     <div class="clearfix"></div>
+     <hr><!--後台可新增設定支持項目數量--->
+     <div class="row container-fluid"><div class="col-xs-4 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div><div class="col-xs-8 col-sm-10"><span class="label label-danger pull-right">限额已满</span>
+     <h4 class="text-danger">支持￥12345</h4><h6 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;12345位支持者(剩余0位)</h6><h6><span class="pull-right label label-default">配送费用：￥12</span></h6></div></div>
+     <p><div class="col-xs-12">每满5000位支持者抽取1位幸运用户，不满足时也抽取1位。幸运用户将会获得TS800R特别版1台（价值4999元）。幸运用户将由京东官方抽取，抽奖规则及中奖者名单将在话题区公布。(全国包邮,台港澳除外)</div></p>
+     <div class="col-xs-12"><h6 class="text-muted"><span class="glyphicon glyphicon-time"></span>&nbsp;预计回报发送时间：项目成功结束后30天</h6></div>
+     <!--<div class="col-xs-12"><a href="support.html" class="btn btn-danger btn-block">該項目</a></div>
+     <div class="clearfix"></div>限額已滿即不會出現此區塊-->
+     <hr><!--後台可新增設定支持項目數量--->
+     <div class="row container-fluid"><div class="col-xs-4 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div><div class="col-xs-8 col-sm-10">
+         <h4 class="text-danger">支持￥123456</h4><h6 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;123456位支持者(剩余12345位)</h6><h6><span class="pull-right label label-default">配送费用：￥12</span></h6></div></div>
+     <p><div class="col-xs-12">每满5000位支持者抽取1位幸运用户，不满足时也抽取1位。幸运用户将会获得TS800R特别版1台（价值4999元）。幸运用户将由京东官方抽取，抽奖规则及中奖者名单将在话题区公布。(全国包邮,台港澳除外)</div></p>
+     <div class="col-xs-12"><h6 class="text-muted"><span class="glyphicon glyphicon-time"></span>&nbsp;预计回报发送时间：项目成功结束后30天</h6></div>
+     <div class="col-xs-12"><a href="support.html" class="btn btn-danger btn-block">直接支持<!--點擊直接支持到下一頁即直接勾選該項目--></a></div>
+     <div class="clearfix"></div>
+     <hr><!--後台可新增設定支持項目數量--->
+     <div class="row container-fluid"><div class="col-xs-4 col-sm-2"><img class="img-rounded" src="images/20160314_460X460_02.jpg"></div><div class="col-xs-8 col-sm-10">
+         <h4 class="text-danger">支持￥123456</h4><h6 class="text-muted"><span class="glyphicon glyphicon-user"></span>&nbsp;1234万位支持者(剩余1234万位)</h6><h6><span class="pull-right label label-default">配送费用：￥12</span></h6></div></div>
+     <p><div class="col-xs-12">每满5000位支持者抽取1位幸运用户，不满足时也抽取1位。幸运用户将会获得TS800R特别版1台（价值4999元）。幸运用户将由京东官方抽取，抽奖规则及中奖者名单将在话题区公布。(全国包邮,台港澳除外)</div></p>
+     <div class="col-xs-12"><h6 class="text-muted"><span class="glyphicon glyphicon-time"></span>&nbsp;预计回报发送时间：项目成功结束后30天</h6></div>
+     <div class="col-xs-12"><a href="support.html" class="btn btn-danger btn-block">直接支持<!--點擊直接支持到下一頁即直接勾選該項目--></a></div>
+     <div class="clearfix"></div>
+     <div class="clear"></div>
+  </div></div>
+  <div style="height:80px"><!--純粹墊高用不被下方選單遮住,不要拿掉--></div>
+</div>
+
+<div class="lightbox-record" id="detail_record">
+      <div class="record" id="msg"><!--眾籌詳細圖文說明介紹-->
+      <div class="detail_img_title col-xs-11"><h5>图文详情：</h5></div><div class="col-xs-1 row text-right"><h4 class="text-muted"><span class="glyphicon glyphicon-remove-circle" onClick="history.go(-1);"></span></h4></div>
+      <hr><!--詳情內文沒有固定形式,完全支援編輯器-->
+      唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静
+      <img src="images/1.jpg"><img src="images/2.jpg">唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀<img src="images/4.gif"><img src="images/5.jpg"><img src="images/6.gif"><img src="images/7.jpg">唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀<img src="images/8.jpg">
+      
+      <button onClick="location.href='support.html'" class="btn btn-danger btn-block">我要支持</button> 
+      <div class="text-center"><h4 class="text-muted"><span class="glyphicon glyphicon-remove-circle" onClick="history.go(-1);"></span></h4></div></div>
+    </div>
+<!--down_menu-開始-->
+<div class="down_menu">
+  <div class="down_menu_content">
+    <div class="down_menu_shoping_cat"><a href="http://wpa.qq.com/msgrd?v=3&uin=3024034865&site=qq&menu=yes"><img src="images/down_menu_bn06_icon_40X40.png" width="20px"><br>
+      在线客服</a><!--點擊可切換成QQ線上客服,上面QQ號連結是假的,需看之後眾籌客服QQ號是多少--></div>
+    <div class="down_menu_attention"><a href="#"><img src="images/down_menu_bn05_icon_40X40.png" width="20px"><br>
+      关注</a></div>
+    <div class="down_menu_attention_active"><a href="#"><img src="images/down_menu_bn05_active.png" width="20px"><br>
+      已关注</a></div>
+    <script>
+	  //簡易開關"關注""已關注"
+$(document).ready(function(){
+	$(".down_menu_attention_active").hide();
+    $(".down_menu_attention").click(function(){
+        $(".down_menu_attention").hide();
+		$(".down_menu_attention_active").show();
+    });
+    $(".down_menu_attention_active").click(function(){
+        $(".down_menu_attention_active").hide();
+		$(".down_menu_attention").show();
+    });
+});
+</script>
+    <div class="down_menu_shoping_cat">
+      <a href="orderslist.html"><img src="images/down_menu_bn03_icon_40X40.png"><br>
+      支持项目</a></div>
+    <a href="support.html" class="buy_now" style="width:118px">我要支持</a>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--down_menu-end-->
+
+<script type="text/javascript" src="swiper/swiper.min.js"></script> 
+<script>//輪播程式
+    var mySwiper = new Swiper('.swiper-container',{
+	loop: true,
+    autoplay: 3500,
+    autoplayDisableOnInteraction: false
+});
+    </script>
+    <script src="js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript">//點圖放大程式
+	$( document ).ready(function() {
+			$( '.swipebox' ).swipebox({
+			removeBarsOnMobile : true,
+			})
+      });
+	</script>
+</body>
+</html>

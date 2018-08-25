@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="description" content="众筹平台">
+<title>随便筹</title>
+<link href="../16X16_yiwei_logo.ico" rel="SHORTCUT ICON">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+//靠右浮動廣告
+// 當網頁載入完
+$(window).load(function(){
+	var $win = $(window),
+		$ad = $('#abgne_float_ad').css('opacity', 0).show(),// 讓廣告區塊變透明且顯示出來
+		_width = $ad.width(),
+		_height = $ad.height(),
+		_diffY = 300, _diffX = 0,	// 距離右及下方邊距
+		_moveSpeed = 800;	// 移動的速度
+ 
+	// 先把 #abgne_float_ad 移動到定點
+	$ad.css({
+		top: $(document).height(),
+		left: $win.width() - _width - _diffX,
+		opacity: 0.8
+	});
+ 
+	// 幫網頁加上 scroll 及 resize 事件
+	$win.bind('scroll resize', function(){
+		var $this = $(this);
+ 
+		// 控制 #abgne_float_ad 的移動
+		$ad.stop().animate({
+			top: $this.scrollTop() + $this.height() /2-20,
+			left: $this.scrollLeft() + $this.width() - _width - _diffX
+		}, _moveSpeed);
+	}).scroll();	// 觸發一次 scroll()
+ 
+	// 關閉廣告
+	$('#abgne_float_ad .abgne_close_ad').click(function(){
+		$ad.hide();
+	});
+});
+
+window.onload = moveFn;//抓取解析
+function moveFn(){
+	 if( typeof( window.innerWidth ) == 'number' ) {
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else{
+    myWidth = document.documentElement.clientWidth;/* for ie*/
+    myHeight = document.documentElement.clientHeight;/* for ie*/
+  }
+  var bn01=document.getElementById("msg");//設定彈框高度
+	var bn01_Y=(myHeight/2)-150+"px";
+	bn01.style.margin=bn01_Y+" auto";
+}
+</script>
+</head>
+<body>
+<!--內容_開始-->
+<div class="spread">
+<div class="content_w740">
+  <div class="area_bg">
+      <div class="top_title"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</div>
+<hr>
+<div class="bg-success img-thumbnail">
+      <div class="col-xs-4 col-sm-2 personal_title"><img class="img-circle" src="images/100X100_jero01.gif"></div>
+      <div class="col-xs-8 col-sm-10">
+      <div class="grade"><img src="images/p_icon_100X100.gif"><span>一般会员</span></div>
+        <h5><small><span class="glyphicon glyphicon-user"></span></small>&nbsp;草泥马隔壁住大妈</h5>
+        <h5><small><span class="glyphicon glyphicon-credit-card"></span></small>&nbsp;会员ID：123457890</h5>
+      </div>
+    <div class="clear"></div></div>
+
+  </div>
+  <!--<div class="area_bg">
+    <a href="pro_account.html" class="col-xs-4 money_change"><img class="img-circle" src="images/pro_icon_100X100.gif">
+      <div>盈利账户</div>
+      <div class="price">￥10000000.00</div>
+      </a><div class="clear"></div>
+  </div>-->
+  <div class="area_bg">
+    <div class="p_menu">
+    <ul class="list-group">
+    <!--<li class="list-group-item">
+    <a href="payindex.html"><img src="images/p_menu01_icon_40X40.png">现金充值</a>
+    </li>-->
+    <!--<li class="list-group-item">
+      <a href="integral_account.html"><img src="images/p_menu02_icon_40X40.png">我的积分&nbsp;<span class="label label-warning">拥有20</span></a>
+      </li>-->
+      <li class="list-group-item">
+      <span class="badge">4</span><!--秀支持筆數--><a href="orderslist.html"><img src="images/p_menu03_icon_40X40.png">我的支持</a>
+      </li>
+      <li class="list-group-item">
+      <span class="badge">8</span><!--秀關注筆數--><a href="attention_list.html"><img src="images/p_menu04_icon_40X40.png">我的关注</a></li>
+      <li class="list-group-item">
+      <span class="badge">24</span><!--秀未讀訊息筆數--><a href="news_center.html"><img src="images/p_menu09_icon_40X40.png">我的消息&nbsp;<span class="point_red">new</span></a></li>
+     <!-- <li class="list-group-item">
+      <a href="myteam.html"><img src="images/p_menu06_icon_40X40.png">我的团队</a>
+      </li>-->
+      <li class="list-group-item">
+      <a href="wallet_account.html"><img src="images/p_menu12_icon_40X40.png">我的钱包</a>
+      </li>
+      <li class="list-group-item">
+      <a href="y_money_account.html"><img src="images/v1_icon_40X40.png">我的易币</a>
+      </li>
+      <li class="list-group-item">
+      <a href="spread.html"><img src="images/p_menu07_icon_40X40.png">我的推广</a>
+      </li>
+      
+      <li class="list-group-item">
+      <a href="csr.html"><img src="images/p_menu10_icon_40X40.png">客服中心</a>
+      </li>
+      <li class="list-group-item">
+      <a href="attestation.html"><img src="images/p_menu05_icon_40X40.png">实名认证&nbsp;&nbsp;<img src="images/p_menu05-6_icon_40X40.png">未认证</a><!--已認證即切換圖片p_menu05-5_icon_40X40.png-->
+      </li>
+      <li class="list-group-item">
+      <a href="address.html"><img src="images/p_menu11_icon_40X40.png">地址管理</a>
+      </li>
+      <li class="list-group-item">
+      <a href="setting.html"><img src="images/p_menu08_icon_40X40.png">帐号设置</a>
+      </li>
+      </ul>
+      </div>
+  </div></div>
+  <div style="height:40px"><!--純粹墊高用不被下方選單遮住,不要拿掉--></div>
+</div>
+
+<div id="abgne_float_ad" ><!--靠右關注二維碼,可否判斷已經關注就不顯示-->
+		<!--<span class="abgne_close_ad">[X]</span>-->
+		<a href="#qr_cold"><img src="images/follow_icon_40X40.gif"></a>
+	</div>
+    
+    <div class="lightbox-record" id="qr_cold" onClick="history.go(-1);">
+      <div class="record" id="msg"><!--彈出平台二維碼-->
+      
+      <img src="images/qr_cold.png">
+      </div>
+    </div>
+<!--down_menu-開始-->
+<div class="down_menu">
+  <div class="down_menu_content">
+    <div class="down_menu_bn"><a href="index.html"><img src="images/down_menu_bn01_icon_40X40.png"><br>
+      首　页</a></div>
+    <div class="down_menu_bn"><a href="main.html"><img src="images/down_menu_bn02_icon_40X40.png"><br>
+      众筹分类</a></div>
+    <div class="down_menu_bn">
+      <a href="orderslist.html"><img src="images/down_menu_bn03_icon_40X40.png"><br>
+      支持项目</a></div>
+    <div class="down_menu_bn_active"><a href="#"><img src="images/down_menu_bn04_active.png"><br>
+      个人中心</a></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--down_menu-end-->
+</body>
+</html>

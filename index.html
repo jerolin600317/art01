@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name="description" content="众筹平台">
+<title>随便筹</title>
+<link href="../16X16_yiwei_logo.ico" rel="SHORTCUT ICON">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="swiper/swiper.3.1.7.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+//靠右浮動廣告
+// 當網頁載入完
+$(window).load(function(){
+	var $win = $(window),
+		$ad = $('#abgne_float_ad').css('opacity', 0).show(),// 讓廣告區塊變透明且顯示出來
+		_width = $ad.width(),
+		_height = $ad.height(),
+		_diffY = 300, _diffX = 0,	// 距離右及下方邊距
+		_moveSpeed = 800;	// 移動的速度
+ 
+	// 先把 #abgne_float_ad 移動到定點
+	$ad.css({
+		top: $(document).height(),
+		left: $win.width() - _width - _diffX,
+		opacity: 0.8 //透明度
+	});
+ 
+	// 幫網頁加上 scroll 及 resize 事件
+	$win.bind('scroll resize', function(){
+		var $this = $(this);
+ 
+		// 控制 #abgne_float_ad 的移動
+		$ad.stop().animate({
+			top: $this.scrollTop() + $this.height() /2-20,
+			left: $this.scrollLeft() + $this.width() - _width - _diffX
+		}, _moveSpeed);
+	}).scroll();	// 觸發一次 scroll()
+ 
+	// 關閉廣告
+	$('#abgne_float_ad .abgne_close_ad').click(function(){
+		$ad.hide();
+	});
+});
+
+window.onload = moveFn;//抓取解析
+function moveFn(){
+	 if( typeof( window.innerWidth ) == 'number' ) {
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else{
+    myWidth = document.documentElement.clientWidth;/* for ie*/
+    myHeight = document.documentElement.clientHeight;/* for ie*/
+  }
+  var bn01=document.getElementById("msg");//設定彈框高度
+	var bn01_Y=(myHeight/2)-150+"px";
+	bn01.style.margin=bn01_Y+" auto";
+}
+</script>
+</head>
+<body>
+<!--top_menu-開始-->
+<div class="top_menu">
+  <div class="top_menu_content">
+    <div class="top_logo_icon"></div>
+    <a href="search.html" class="top_search_bn">搜寻<br>
+    众筹</a>
+    <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+  </div>
+</div>
+<!--top_menu-end--> 
+
+<!--內容_開始-->
+<div class="content">
+ 
+<!--分類選單_開始-->
+<div class="sort_menu">
+  <div class="sort_menu_content">
+    <div class="swiper-wrapper"> 
+      <div class="swiper-slide sort_bn"><a href="main.html"><img src="images/skin_care_icon_100X100.gif"><br>效益众筹</a></div>
+      <div class="swiper-slide sort_bn"><a href="main.html"><img src="images/makeup_icon_100X100.gif"><br>产品众筹</a></div>
+      <div class="swiper-slide sort_bn"><a href="main.html"><img src="images/health_icon_100X100.gif"><br>公益众筹</a></div>
+      <div class="swiper-slide sort_bn"><a href="main.html"><img src="images/food_icon_100X100.gif"><br>创业众筹</a></div>
+      <div class="swiper-slide sort_bn"><a href="main.html"><img src="images/drink_icon_100X100.gif"><br>梦想众筹</a></div>
+    </div>
+  </div>
+</div>
+<!--分類選單_end-->
+<!--輪播廣告_開始-->
+<div class="event_bn">
+  <div class="swiper-container-event">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"> <a href="goods_page.html"><img src="images/20160107_720X300_coffee.jpg"></a> </div>
+      <div class="swiper-slide"> <a href="goods_page.html"><img src="images/20160107_720X300_monlyn.jpg"></a> </div>
+      <div class="swiper-slide"> <a href="goods_page.html"><img src="images/20160303_720X300_38day.jpg"></a> </div>
+    </div>
+  </div>
+</div>
+<!--輪播廣告_end--> 
+<!--廣告模組開始-->
+<div class="content_w740">
+  <div class="area_bg">
+    <h5 class="text-success"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;热门推荐</h5>
+    <hr>
+    <div class="area_content">
+    <div class="swiper-container">
+    <div class="swiper-wrapper">  
+    <!--熱門推薦內容-->
+    <div class="swiper-slide"><!--後台可設定要推薦項目數量-->
+    <a href="goods_page.html"><div class="bg-success img-thumbnail">
+    <div class="top_title">变美美面膜变美美面膜变美美面膜变美美面膜</div>
+    <hr>
+    <div class="row container-fluid"><div class="col-xs-7 col-sm-3"><img class="img-rounded" src="images/20160314_460X460_02.jpg"><span class="types_of"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>&nbsp;效益众筹</span></div><div class="col-xs-5 col-sm-9">
+    <span class="glyphicon glyphicon-flag"></span>&nbsp;目标金额：<h3 class="text-danger">￥1234万</h3><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+    <span class="glyphicon glyphicon-flag"></span>&nbsp;已筹金额：<h3 class="text-danger">￥123456</h3><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+    </div><div class="clear"></div></div>
+    <div class="col-xs-12"><div class="progress">
+      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+      </div></div>
+    <div class="round_out"><div class="round">5523万<h6>支持人数</h6><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></div></div>
+    <div class="round_out"><div class="red_round">5523%<h6>达成率</h6></div></div>
+    <div class="round_out"><div class="round">552<small>天</small><h6>剩余天数</h6></div></div>
+    <hr>
+      <div class="col-xs-12">唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静</div>
+        </div></a></div>
+        
+        <div class="swiper-slide">
+    <a href="goods_page.html"><div class="bg-success img-thumbnail">
+    <div class="top_title">穷得只剩钱,谁来帮我花</div>
+    <hr>
+    <div class="row container-fluid"><div class="col-xs-7 col-sm-3"><img class="img-rounded" src="images/20160314_460X460_01_2.jpg"><span class="types_of"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>&nbsp;效益众筹</span></div><div class="col-xs-5 col-sm-9">
+    <span class="glyphicon glyphicon-flag"></span>&nbsp;目标金额：<h3 class="text-danger">￥1234万</h3><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+    <span class="glyphicon glyphicon-flag"></span>&nbsp;已筹金额：<h3 class="text-danger">￥123456</h3><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+    </div><div class="clear"></div></div>
+    <div class="col-xs-12"><div class="progress">
+      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+      </div></div>
+    <div class="round_out"><div class="round">5523万<h6>支持人数</h6><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></div></div>
+    <div class="round_out"><div class="red_round">5523%<h6>达成率</h6></div></div>
+    <div class="round_out"><div class="round">552<small>天</small><h6>剩余天数</h6></div></div>
+    
+    <hr>
+      <div class="col-xs-12">唤醒肌肤内在生机补水锁水紧致肌肤细胞活跃控制油分雀斑靓白舒缓镇静</div>
+        </div></a></div>
+        <!--熱門推薦end--></div></div>
+    </div>
+  </div>
+  <!--商品模組_end--> 
+  <!--商品模組_開始-->
+  <div class="area_bg">
+    <div class="my-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active">综合推荐</span><span class="swiper-pagination-bullet">最新上线</span><span class="swiper-pagination-bullet">金额最高</span><span class="swiper-pagination-bullet">支持最多</span><span class="swiper-pagination-bullet">即将结束</span></div>
+    <div class="area_content"> 
+    <div class="swiper-container-sort">
+      <div class="swiper-wrapper"> 
+        <!--综合推荐商品,後台可操作推薦那些產品-->
+        <div class="swiper-slide">
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥123456</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end--> 
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end-->
+            <div class="pull-right"><a href="product_listing.html" class="btn btn-default btn-xs">更多推荐众筹</a></div>
+            <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+        </div>
+        <!--商品模組_end-->
+        <!--最新上线商品,以上架時間抓取-->
+        <div class="swiper-slide">
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end--> 
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end-->
+            <div class="pull-right"><a href="product_listing.html" class="btn btn-default btn-xs">更多新上线众筹</a></div>
+            <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+        </div>
+        <!--商品模組_end-->
+        <!--金额最高商品,抓取目前籌得金額最高-->
+        <div class="swiper-slide">
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end--> 
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end-->
+            <div class="pull-right"><a href="product_listing.html" class="btn btn-default btn-xs">更多金额最高众筹</a></div>
+            <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+        </div>
+        <!--商品模組_end-->
+        <!--支持最多商品,抓取目前支持人數最高-->
+        <div class="swiper-slide">
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end--> 
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end-->
+            <div class="pull-right"><a href="product_listing.html" class="btn btn-default btn-xs">更多支持最多众筹</a></div>
+            <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+        </div>
+        <!--商品模組_end-->
+        <!--即将结束商品,抓取即將結束商品-->
+        <div class="swiper-slide">
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end--> 
+            <!--商品,一列兩個一組,後台可制定數量-->
+            <div class="index_commodity"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_01.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000万&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 200%;"><!--達成百分比進度條,顯示最高就100%,超過還是只顯示100%不會破表--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;1000%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234万</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+            <div class="index_commodity" style="border-right-width:0px"><a href="goods_page.html"><span class="col-xs-12 col-sm-6"><img src="images/20160314_460X460_03.jpg"> <span class="support_p"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;1000&nbsp;人</span><!--數字達7位數百萬以上,即出現"万"字避免數字過多--></span>
+              <span class="col-xs-12 col-sm-6"><ul>
+                <li>
+                  <h5>变美面膜变美面膜变美面膜变美面膜变美面膜</h5>
+                </li>
+                <li>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><!--達成百分比--></div>
+                  </div>
+                </li>
+                <li><span class="label label-success">达成</span>&nbsp;60%</li>
+                <li><span class="label label-success">已筹</span>&nbsp;<span class="text-danger">￥1234</span></li><!--數字達7位數百萬以上,即出現"万"字避免數字過多-->
+                <li><span class="label label-success">类型</span>&nbsp;效益众筹</li>
+              </ul></span>
+              </a></div>
+              <hr>
+            <!--商品end-->
+            <div class="pull-right"><a href="product_listing.html" class="btn btn-default btn-xs">更多即将结束众筹</a></div>
+            <div class="clear"><!--清除靠左版面用,請勿拿掉--></div>
+        </div>
+        <!--商品模組_end-->
+        
+      </div>
+    </div>
+  </div></div>
+  </div>
+  <div style="height:80px"><!--純粹墊高用不被下方選單遮住,不要拿掉--></div>
+</div>
+
+<div id="abgne_float_ad"><!--靠右關注二維碼,可否判斷已經關注就不顯示-->
+		<!--<span class="abgne_close_ad">[X]</span>-->
+        <a href="#qr_cold" class="swiper_ad"><img src="images/follow_icon_40X40_01.png"></a>
+	</div>
+    
+    <div class="lightbox-record" id="qr_cold" onClick="history.go(-1);">
+      <div class="record" id="msg"><!--彈出平台二維碼-->
+      
+      <img src="images/qr_cold.png">
+      </div>
+    </div>
+<!--down_menu-開始-->
+<div class="down_menu">
+  <div class="down_menu_content">
+    <div class="down_menu_bn_active"><a href="#"><img src="images/down_menu_bn01_active.png"><br>
+      首　页</a></div>
+    <div class="down_menu_bn"><a href="main.html"><img src="images/down_menu_bn02_icon_40X40.png"><br>
+      众筹分类</a></div>
+    <div class="down_menu_bn">
+      <a href="orderslist.html"><img src="images/down_menu_bn03_icon_40X40.png"><br>
+      支持项目</a></div>
+    <div class="down_menu_bn"><a href="login.html"><img src="images/down_menu_bn04_icon_40X40.png"><br>
+      个人中心</a></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--down_menu-end-->
+
+<script type="text/javascript" src="swiper/swiper.3.1.7.jquery.min.js"></script> 
+<script>//輪播廣告程式
+    var mySwiper = new Swiper('.swiper-container-event',{
+	loop: true,
+    autoplay: 3500,//停留時間
+	speed:1500,//過場時間
+    autoplayDisableOnInteraction: false,
+    effect: 'fade',//換頁效果
+	fade: {
+  crossFade: true,//開啟淡出
+}
+})
+//關注動畫程式
+//    var mySwiper = new Swiper('.swiper_ad',{
+//	loop: true,
+//    autoplay: 1500,//停留時間
+//	speed:500,//過場時間
+//    autoplayDisableOnInteraction: false,
+//    effect: 'fade',//換頁效果
+//	fade: {
+//  crossFade: true,//開啟淡出
+//}
+//})
+//熱門推薦區塊輪播
+var mySwiper = new Swiper('.swiper-container',{
+	loop: true,
+    autoplay: 5000,//停留時間
+	speed:500,//過場時間
+    autoplayDisableOnInteraction: false,
+})
+//分類選單
+var mySwiper = new Swiper('.sort_menu_content',{
+	loop: true,
+    slidesPerView: 5,
+    spaceBetween: 6,
+})
+    </script>
+    <script>//分頁程式
+var mySwiper = new Swiper('.swiper-container-sort',{
+	loop: true,
+pagination: '.my-pagination',
+paginationClickable: true,
+paginationBulletRender: function (index, className) {
+switch (index) {
+  case 0: name='综合推荐';break;
+  case 1: name='最新上线';break;
+  case 2: name='金额最高';break;
+  case 3: name='支持最多';break;
+  case 4: name='即将结束';break;
+  default: name='';
+}
+      return '<span class="' + className + '" style="width:20%"><span class="beeline">│</span>' + name + '<div class="triangle">▼</div></span>';
+  }
+})
+
+</script>
+</body>
+</html>
